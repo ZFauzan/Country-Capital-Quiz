@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capital City Quiz</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body id="app">
+  <form class="container" action="/submit" method="post">
+    <div class="horizontal-container">
+      <div>
+        <h3 class="totalScore">
+          Total Score:
+          <span id="score">
+            <%= locals.totalScore ? totalScore : "0" %>
+          </span>
+        </h3>
+      </div>
+
+      <div>
+        <h3 class="correctAnswer">
+          Answer:
+          <span id="showAnswer"> 
+            <%= locals.correctCapital ? correctCapital : "?" %>
+          </span>
+        </h3>
+      </div>
+    </div>
+
+    <h1 id="countryName">
+      <%=question.country%>
+    </h1>
+    <div class="answer-container">
+      <input type="text" name="answer" id="userInput" placeholder="Enter the capital city">
+    </div>
+
+    <button type="submit">SUBMIT
+      <% if(locals.wasCorrect){ %>
+          <span class="checkmark">✔</span>
+      <% } else if (locals.wasCorrect===false) { %>
+            <span class="cross" id="error">✖</span>
+      <% } %>
+    </button>
+    <a id="restartBtn" href="/">RESTART</a>
+  </form>
+
+  <script>
+    var wasCorrect = "<%= locals.wasCorrect %>";
+    if (wasCorrect === "false") {
+      document.getElementById("countryName").innerHTML = 'Game over!';
+    }
+  </script>
+</body>
+
+</html>
