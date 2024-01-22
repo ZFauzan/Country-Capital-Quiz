@@ -9,7 +9,7 @@ To run this program:
   - Download all files from this repository to your local device
   - Have PostgreSQL installed on your local device and replace the password field in index.js file with your own password
       - Make sure to have imported the capitals.csv file to populate the capitals table
-  - Open terminal on VSCode (or any IDE) and enter the command 'node index.js'
+  - Open terminal on VSCode (or any IDE) and enter the command 'npm install' and then 'node index.js'
   - Open your web browser and type 'localhost:3000' as your URL
   - To stop the server from running, press Ctrl+C
   
