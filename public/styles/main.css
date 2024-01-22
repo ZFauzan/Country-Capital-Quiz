@@ -1,1 +1,105 @@
+body {
+  background-image: url(../images/background.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-width: 40%;
+  height: 300px;
+  margin: 15% auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding-top: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.horizontal-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.horizontal-container > div {
+  margin: 5px;
+}
+
+.answer-container {
+  width: 100%;
+  text-align: center;
+}
+
+input {
+  text-align: center;
+  width: 30%;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button, #restartBtn {
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: large;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px;
+  background-color: #ffca00;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#restartBtn {
+  background-color:rgb(83, 134, 193);
+  width: 96%;
+}
+
+button:hover {
+  background-color: #ffd500;
+}
+
+#restartBtn:hover {
+  background-color:rgb(144, 186, 235);
+}
+
+.checkmark {
+  color: transparent;
+  animation: checkmark 0.6s ease;
+}
+
+.cross {
+  color: transparent;
+  animation: cross 0.6s ease;
+}
+
+@keyframes checkmark {
+  0% {
+    color: transparent;
+  }
+  100% {
+    color: green;
+  }
+}
+
+@keyframes cross {
+  0% {
+    color: transparent;
+  }
+  100% {
+    color: red;
+  }
+}
